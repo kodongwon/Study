@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- mapper 속성으로 namespace가 반드시 있어야 하며 이름을 주고 싶지 않으면  -->
+  <mapper namespace=" ">
+	<!--mapper 안에 sql query문을 작성할 수 있음 -->
+	<select id="selectAllByEmp" resultType="vo.EmpVO">
+		select * from emp
+	</select>
+	<select id="selectOneByEmpno" parameterType="int" resultType="vo.EmpVO">
+		select * from emp
+		where empno = #{empno}
+	</select>
+	<insert id="insertOneEmp" parameterType="vo.EmpVO">
+		insert into emp
+		values (#{empno}, #{ename}, #{job}, #{mgr}, 
+				#{hiredate}, #{sal}, #{comm}, #{deptno})
+	</insert>
+	
+	<update id="updateOneEmp" parameterType="vo.EmpVO">
+		update emp
+		set ename = #{ename}, sal = #{sal}, deptno = #{deptno}
+		where empno = #{empno}
+	</update>
+	
+	<delete id="deleteOneEmp" parameterType="int">
+		delete from emp
+		where empno = #{empno}
+	</delete>
+  </mapper>
