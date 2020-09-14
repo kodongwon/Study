@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="g1" class="spring_app06_maven.Gun">
+	
+	</bean>
+	<bean id="s1" class="spring_app06_maven.StunGun">
+	
+	</bean>
+	<bean id="p1" class="spring_app06_maven.Police">
+		<!-- index는 0부터 시작 -->
+<!-- 		<constructor-arg index="0" ref="g1"></constructor-arg>
+		<constructor-arg index="1" value="150"></constructor-arg> -->
+		
+		<property name="hp" value="150"></property>
+		<property name="w" ref="s1"></property>
+	</bean>
+</beans>

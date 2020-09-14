@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="b" class="spring_app02.CoffeeImple">
+		<constructor-arg value="초코우유"></constructor-arg>
+		<!-- 생성자 argument도 컨테이너에서 제어할 수 있음 -->
+	</bean>
+	
+	<!-- 위xml가 같은 코드 -->
+	<bean id="b2" class="spring_app02.MachineCoffee">
+		<constructor-arg value="딸기우유"></constructor-arg>
+	</bean>
+</beans>

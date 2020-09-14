@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 스프링 컨테이너가 사용할 객체의 정보를 여기에 등록 -->
+	<bean id="kr" class="spring_app01.HelloKR"></bean>
+	
+	<bean id="us" class="spring_app01.HelloUS"></bean>
+	
+	<bean id="cn" class="spring_app01.HelloCN"></bean>
+</beans>

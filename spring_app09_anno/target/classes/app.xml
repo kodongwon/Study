@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+	
+	</bean>
+	<bean id="time" class="spring_app09_anno.NowTime">
+	
+	</bean>
+	<bean id="gi" class="spring_app09_anno.GreetingImple">
+<!-- 		<constructor-arg value="오늘은 목요일"></constructor-arg> -->
+<!-- 		<property name="nt" ref="time"></property> -->
+		<property name="msg" value="출력중"></property>
+	</bean>
+
+</beans>
